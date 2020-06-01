@@ -32,16 +32,3 @@ print("-------------------------------------------------")
 
 parse_xml_file()
 parse_yml_file()
-
-class TestMyFunctions(unittest.TestCase):
-    def test_read_file_data(self):
-       
-        sample_json = {
-                      'name' : 'John',
-                      'shares' : 100,
-                      'price' : 1230.23
-                      }
-        sample_json = json.dump(sample_json, ensure_ascii=False)
-        path = 'D:/DevNetTrainingAssignments-master/data/db.json'
-        filename = 'db.json'
-        self.assertEqual(read_file_data(filename, path), sample_json)
