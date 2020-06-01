@@ -5,7 +5,7 @@ def parse_json_file():
     with open('D:/DevNetTrainingAssignments-master/data/dnac_devices.json') as data : #open the json file in read mode
         data_retreived = json.load(data) #retreive the data in json object format
         #print(data_retreived) #print the retreived data
-        list1=[] 
+        #list1=[] 
         #print(list1)
         for i in data_retreived['response']:
             print("{id : ",i['id'], "type : ",i['type'],"family : ",i['family'], " softwareType : ", i['softwareType'],"}")
