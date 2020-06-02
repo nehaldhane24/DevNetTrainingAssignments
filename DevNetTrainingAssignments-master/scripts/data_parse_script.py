@@ -1,7 +1,7 @@
 import json
 import xml.etree.ElementTree as ET
 import yaml
-
+import xmltodict
 
 def parse_json_file():
     print("Printing data from json file : ")
@@ -23,7 +23,7 @@ def parse_xml_file():
                print(j.tag,int(j.text))
            print()
        print("-------------------------------------------------")
-       return xmlstr
+       return xmltodict.parse(xmlstr)
       
 def parse_yml_file():
     print("Printing data from yml file : ")
