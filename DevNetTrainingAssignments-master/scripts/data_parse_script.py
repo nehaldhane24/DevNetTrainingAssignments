@@ -5,14 +5,14 @@ import yaml
 
 def parse_json_file():
     print("Printing data from json file : ")
-    with open('D:/DevNetTrainingAssignments-master/data/db.json') as data : #open the json file in read mode
+    with open('data/db.json') as data : #open the json file in read mode
         data_retreived = json.load(data) #retreive the data in json object format
         #print(data_retreived) #print the retreived data 
         return data_retreived
         
 def parse_xml_file():
     print("Printing data from xml file : ")
-    with open('D:/DevNetTrainingAssignments-master/data/db.xml') as xmlfile : #open the xml file in read mode
+    with open('data/db.xml') as xmlfile : #open the xml file in read mode
        tree = ET.parse(xmlfile)
        root = tree.getroot()
        xmlstr = ET.tostring(root, encoding='utf8', method='xml')
@@ -27,7 +27,7 @@ def parse_xml_file():
       
 def parse_yml_file():
     print("Printing data from yml file : ")
-    with open('D:/DevNetTrainingAssignments-master/data/db.yml','r') as ymlfile : #open the yml file in read mode
+    with open('data/db.yml','r') as ymlfile : #open the yml file in read mode
         data = yaml.safe_load(ymlfile) #retreive the data in yml object format
         #print(data) #print the retreived data 
         return data
@@ -58,8 +58,6 @@ due 0
 
 -------------------------------------------------
 Printing data from yml file :
-d:/DevNetTrainingAssignments-master/data/data_parse_script.py:27: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
-  data = yaml.load(ymlfile) #retreive the data in yml object format
 {'ACCT700': {'paid': 60, 'due': 100}, 'ACCT800': {'paid': 70, 'due': 60}, 'ACCT900': {'paid': 0, 'due': 0}}
 
 '''
