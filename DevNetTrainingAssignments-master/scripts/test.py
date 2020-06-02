@@ -43,8 +43,8 @@ class TestMyFunctions(unittest.TestCase):
                         </ACCT600>
                         </root>"""#hardcoded xml file
         
-        data1 = json.dumps(data_parse_script.parse_xml_file())#convert expexted file to dictionary for comparison
-        copy_xml = json.dumps(xmltodict.parse(copy_xml))
+        data1 = json.dumps(data_parse_script.parse_xml_file())
+        copy_xml = json.dumps(xmltodict.parse(copy_xml))#convert expected file to dictionary for comparison
         self.assertEqual(data1, copy_xml) #check if the loaded file and hardcoded files match
         
     def test_read_file_data_yml(self):
