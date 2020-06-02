@@ -15,12 +15,15 @@ def parse_xml_file():
     with open('D:/DevNetTrainingAssignments-master/data/db.xml') as xmlfile : #open the xml file in read mode
        tree = ET.parse(xmlfile)
        root = tree.getroot()
+       xmlstr = ET.tostring(root, encoding='utf8', method='xml')
+       #print(xmlstr)
        for i in root: #iterate all the roots
            print(i.tag, i.attrib)
            for j in i : #iterate all the chidren
                print(j.tag,int(j.text))
            print()
        print("-------------------------------------------------")
+       return xmlstr
       
 def parse_yml_file():
     print("Printing data from yml file : ")
