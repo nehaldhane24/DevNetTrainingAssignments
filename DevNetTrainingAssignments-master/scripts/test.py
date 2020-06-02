@@ -41,9 +41,9 @@ class TestMyFunctions(unittest.TestCase):
                             <paid>0</paid>
                             <due>0</due>
                         </ACCT600>
-                        </root>"""
-        #hardcoded json file
-        data1 = json.dumps(data_parse_script.parse_xml_file())
+                        </root>"""#hardcoded xml file
+        
+        data1 = json.dumps(data_parse_script.parse_xml_file())#convert expexted file to dictionary for comparison
         copy_xml = json.dumps(xmltodict.parse(copy_xml))
         self.assertEqual(data1, copy_xml) #check if the loaded file and hardcoded files match
         
